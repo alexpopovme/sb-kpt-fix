@@ -1,0 +1,18 @@
+{
+  "name": "sb-kpt-fix",
+  "version": "1.0.0",
+  "description": "Fix PTP bug of incorrect organizing of Sidebar plugin custom items in .kpt file",
+  "main": "index.js",
+  "author": "Alexander Popov",
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup -c",
+    "serve": "http-server dist -c-1 -p 9900 -s"
+  },
+  "devDependencies": {
+    "http-server": "^0.12.3",
+    "rollup": "^2.42.3",
+    "rollup-plugin-copy": "^3.4.0",
+    "rollup-plugin-terser": "^7.0.2"
+  }
+}
