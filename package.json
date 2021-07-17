@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "build": "rollup -c",
-    "serve": "http-server dist -c-1 -p 9900 -s"
+    "serve": "http-server dist -c-1 -p 9900"
   },
   "devDependencies": {
     "http-server": "^0.12.3",
