@@ -12,10 +12,14 @@ const saveFile = (str, fileName) => {
 
 const process = (str, fileName) => {
   let _str = str
-  const iterator = _str.matchAll(/group id=("customItem\d*")[\s\S]*?("alpo_sidebar_fullitemName\d*)"/g)
+  const re = /<group[\s\S]*?id=("customItem\d*")[\s\S]*?("alpo_sidebar_fullitemName\d*)[\s\S]*?(alpo_sidebar_fullsubItemIndex\d*)[\s\S]*?(alpo_sidebar_fullsubPanoIDs\d*)[\s\S]*?<\/group/g
+  const iterator = _str.matchAll(re)
   const arr = Array.from(iterator, (entry) => entry[0])
   arr.map((entry, index) => {
-    const r = entry.replace(/alpo_sidebar_fullitemName\d*/, `alpo_sidebar_fullitemName${index + 1}`)
+    const r = entry
+      .replace(/alpo_sidebar_fullitemName\d*/, `alpo_sidebar_fullitemName${index}`)
+      .replace(/alpo_sidebar_fullsubItemIndex\d*/, `alpo_sidebar_fullsubItemIndex${index}`)
+      .replace(/alpo_sidebar_fullsubPanoIDs\d*/, `alpo_sidebar_fullsubPanoIDs${index}`)
     _str = _str.replace(entry, r)
   })
   saveFile(_str, fileName)
