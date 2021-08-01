@@ -1,6 +1,6 @@
-# Sidebar kpt fix
+# Sidebar/Top Menu project file (.kpt) fix
 
-Fix PTP bug of incorrect organizing Sidebar plugin custom items in .kpt file
+Fixes PTP bug of incorrect organizing custom items in the Sidebar plugin or categories in the Top Menu plugin.
 
 https://alexpopovme.github.io/sb-kpt-fix/
 

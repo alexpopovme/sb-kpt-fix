@@ -3,11 +3,38 @@
 <head>
 	<title>Sidebar kpt fix</title>
     <script src="index.js"></script>
+    <style>
+        #container {
+            color: #292f33;
+        }
+        p, h3 {
+            margin: 0;
+        }
+        .label {
+            font-weight: bold;
+            padding-right: 12px;
+        }
+        .row {
+            padding: 18px 0;
+        }
+    </style>
 </head>
 <body>
 <div id="container">
-  <h5>Select kpt file</h5>
-  <input type="file" name="kpt" id="kpt" accept=".kpt" />
+    <h3>Sidebar/Top Menu project file (.kpt) fix</h3>
+    <p>Fixes PTP bug of incorrect organizing custom items in the Sidebar plugin or categories in the Top Menu plugin.</p>
+    <hr>
+    <div class="row">
+        <span class="label">Select plugin</span>
+        <select name="select">
+            <option value="sb" selected>Sidebar</option>
+            <option value="tm">Top Menu</option>
+        </select>
+    </div>
+    <div class="row">
+        <span class="label">Select kpt file</span>
+        <input type="file" name="kpt" id="kpt" accept=".kpt" />
+    </div>
 </div>
 
 </body>
