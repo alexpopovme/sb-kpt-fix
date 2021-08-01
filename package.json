@@ -1,7 +1,7 @@
 {
   "name": "sb-kpt-fix",
   "version": "1.1.0",
-  "description": "Fix PTP bug of incorrect organizing Sidebar plugin custom items in .kpt file",
+  "description": "Fixes PTP bug of incorrect organizing custom items in the Sidebar plugin or categories in the Top Menu plugin.",
   "main": "index.js",
   "author": "Alexander Popov",
   "license": "MIT",
